@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar</title>
+  <link rel="stylesheet" href="/public/style2.css">
+</head>
+<body>
+
+  
+  
+  <div class="container">
+    
+    <!-- Seu formulário de cadastro -->
+    <form method="post" action="/cadastrar">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <!-- Adicione um local para mensagens de erro -->
+    <div id="errorMessage" style="color: red;font-family: bold ; font-weight: bold;">
+      <% if (typeof errorMessage !== 'undefined' && errorMessage) { %>
+        <%= errorMessage %>
+      <% } %>
+    </div>
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- Botão de envio do formulário -->
+      <button type="submit">Cadastrar</button>
+      <a href="/">voltar</a>
+    </form>
+  </div>
+
+</body>
+</html>
